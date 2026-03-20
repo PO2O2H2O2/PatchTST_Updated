@@ -1,0 +1,71 @@
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x000001E8FF12C720>
+Traceback (most recent call last):
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\utils\data\dataloader.py", line 1707, in __del__
+    self._shutdown_workers()
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\utils\data\dataloader.py", line 1671, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "C:\Users\ani_nonadmin\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "C:\Users\ani_nonadmin\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\popen_spawn_win32.py", line 114, in wait
+    res = _winapi.WaitForSingleObject(int(self._handle), msecs)
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\PatchTST_supervised\run_longExp.py", line 144, in <module>
+    exp.train(setting)
+    ~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\PatchTST_supervised\exp\exp_main.py", line 163, in train
+    outputs = self.model(batch_x)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\PatchTST_supervised\models\PatchTST.py", line 90, in forward
+    x = self.model(x)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\PatchTST_supervised\layers\PatchTST_backbone.py", line 74, in forward
+    z = self.backbone(z)                                                                # z: [bs x nvars x d_model x patch_num]
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\PatchTST_supervised\layers\PatchTST_backbone.py", line 168, in forward
+    z = self.encoder(u)                                                      # z: [bs * nvars x patch_num x d_model]
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\PatchTST_supervised\layers\PatchTST_backbone.py", line 193, in forward
+    for mod in self.layers: output, scores = mod(output, prev=scores, key_padding_mask=key_padding_mask, attn_mask=attn_mask)
+                                             ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\PatchTST_supervised\layers\PatchTST_backbone.py", line 258, in forward
+    src2 = self.ff(src)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\container.py", line 253, in forward
+    input = module(input)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\modules\dropout.py", line 73, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ani_nonadmin\stuff\coding\dl\PatchTST\.venv\Lib\site-packages\torch\nn\functional.py", line 1441, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+                                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
